@@ -57,6 +57,8 @@
             background-color: var(--accent-color);
             color: white;
             box-shadow: 0 4px 15px rgba(255, 111, 0, 0.2);
+            /* Garante que o texto não quebre fácil no desktop */
+            white-space: nowrap; 
         }
 
         .btn-cta:hover {
@@ -165,32 +167,41 @@
         .about-text h2 { color: var(--text-main); font-size: 2rem; }
         .about-text p { color: var(--text-secondary); margin-bottom: 15px; }
         
-        /* --- ESTILOS DO FORMULÁRIO --- */
         .contact { padding: 80px 0; background-color: var(--primary-color); color: white; }
         .contact-container { max-width: 600px; margin: 0 auto; background: var(--bg-card); padding: 40px; border-radius: 10px; }
         .form-group label { display: block; margin-bottom: 5px; color: var(--text-main); }
-        
-        /* Aqui estilizamos o placeholder para ficar cinza claro */
         .form-group input::placeholder, .form-group select::placeholder { color: #666; }
-        
-        .form-group input, .form-group select { 
-            width: 100%; 
-            padding: 12px; 
-            background-color: #121214; 
-            border: 1px solid #444; 
-            color: white; 
-            border-radius: 5px; 
-            margin-bottom: 20px; 
-        }
-        
+        .form-group input, .form-group select { width: 100%; padding: 12px; background-color: #121214; border: 1px solid #444; color: white; border-radius: 5px; margin-bottom: 20px; }
         .btn-submit { width: 100%; padding: 15px; background-color: var(--secondary-color); color: white; border: none; border-radius: 5px; font-size: 18px; font-weight: bold; cursor: pointer; }
         footer { background-color: #000; color: #555; text-align: center; padding: 30px 0; }
 
+        /* --- RESPONSIVIDADE (CELULAR) - AQUI ESTÁ A CORREÇÃO --- */
         @media (max-width: 768px) {
+            /* Esconde links do menu no celular */
             .nav-links { display: none; }
+            
+            /* Ajusta layout das colunas */
             .about-content { flex-direction: column; }
             .stats-grid { grid-template-columns: 1fr; }
             .hero h1 { font-size: 2rem; }
+            
+            /* === CORREÇÃO DO BOTÃO GIGANTE === */
+            header {
+                height: 70px; /* Header mais baixo no celular */
+            }
+            body {
+                padding-top: 70px; /* Ajusta o corpo para o header menor */
+            }
+            .logo img {
+                max-height: 40px; /* Logo um pouco menor */
+            }
+            .btn-cta {
+                font-size: 0.75rem; /* Letra menor (12px) */
+                padding: 8px 12px;  /* Botão mais fino */
+                white-space: normal; /* Permite quebrar linha de forma controlada se precisar, mas com fonte menor deve caber */
+                line-height: 1.2;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -351,5 +362,4 @@
         });
     </script>
 </body>
-
 </html>
