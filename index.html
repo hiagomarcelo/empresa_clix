@@ -5,18 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO -->
-    <title>CLIX | Gestão de Tráfego Pago para Empresas</title>
+    <title>CLIX | Gestão de Tráfego Pago</title>
     <meta name="description"
-        content="Gestão de tráfego pago focada em resultado. Google Ads e Meta Ads para empresas que querem vender mais com previsibilidade.">
-    <meta name="robots" content="index, follow">
+        content="Transformamos cliques em clientes com tráfego pago inteligente usando Google Ads e Meta Ads.">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="CLIX | Gestão de Tráfego Pago">
-    <meta property="og:description" content="Transformamos cliques em clientes com tráfego pago inteligente.">
-    <meta property="og:type" content="website">
-
-    <!-- Google Tag Manager (SUBSTITUA O ID) -->
+    <!-- Google Tag Manager -->
     <script>
         (function (w, d, s, l, i) {
             w[l] = w[l] || [];
@@ -39,7 +32,6 @@
             --bg: #121214;
             --card: #202024;
             --text: #e1e1e6;
-            --muted: #a8a8b3;
         }
 
         /* ================= RESET ================= */
@@ -68,18 +60,27 @@
             padding: 0 20px;
         }
 
-        /* ================= BOTÕES ================= */
+        /* ================= BOTÕES (CORRIGIDOS) ================= */
         .btn {
-            padding: 12px 30px;
-            border-radius: 5px;
+            padding: 14px 32px;
+            border-radius: 6px;
             font-weight: bold;
             text-transform: uppercase;
             cursor: pointer;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            line-height: 1.2;
+            white-space: nowrap;
         }
 
         .btn-cta {
             background: var(--accent);
             color: #fff;
+            min-height: 52px;
         }
 
         /* ================= HEADER ================= */
@@ -101,12 +102,13 @@
         }
 
         .logo img {
-            max-height: 120px;
+            max-height: 110px;
         }
 
         .nav-links {
             display: flex;
             gap: 30px;
+            list-style: none;
         }
 
         /* ================= HERO ================= */
@@ -126,7 +128,7 @@
 
         .hero p {
             font-size: 1.2rem;
-            max-width: 700px;
+            max-width: 720px;
             margin: 0 auto 40px;
             opacity: .9;
         }
@@ -204,7 +206,7 @@
             background: #000;
             padding: 30px;
             text-align: center;
-            color: #555;
+            color: #777;
         }
 
         /* ================= RESPONSIVO ================= */
@@ -226,7 +228,7 @@
 
 <body>
 
-    <!-- Google Tag Manager (noscript) -->
+    <!-- GTM NOSCRIPT -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0"
             style="display:none;visibility:hidden"></iframe>
@@ -237,7 +239,7 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <img src="logo.png" alt="CLIX Gestão de Tráfego">
+                    <img src="logo.png" alt="CLIX">
                 </div>
 
                 <ul class="nav-links">
@@ -246,7 +248,9 @@
                     <li><a href="#contato">Contato</a></li>
                 </ul>
 
-                <a href="#contato" class="btn btn-cta">Análise Gratuita</a>
+                <a href="#contato" class="btn btn-cta">
+                    ANÁLISE GRATUITA
+                </a>
             </nav>
         </div>
     </header>
@@ -259,7 +263,10 @@
                 Gestão de tráfego focada em performance para empresas que querem vender mais
                 com previsibilidade usando Google Ads e Meta Ads.
             </p>
-            <a href="#contato" class="btn btn-cta" id="ctaHero">Quero uma análise gratuita</a>
+
+            <a href="#contato" class="btn btn-cta" id="ctaHero">
+                QUERO UMA ANÁLISE GRATUITA
+            </a>
         </div>
     </section>
 
@@ -268,13 +275,13 @@
         <div class="container">
             <div class="section-title">
                 <h2>Serviços</h2>
-                <p>Estratégias focadas em gerar clientes.</p>
+                <p>Estratégias focadas em resultado real.</p>
             </div>
 
             <div class="services-grid">
                 <div class="card">
                     <h3>Google Ads</h3>
-                    <p>Campanhas de fundo de funil focadas em conversão.</p>
+                    <p>Campanhas focadas em conversão e fundo de funil.</p>
                 </div>
 
                 <div class="card">
@@ -284,7 +291,7 @@
 
                 <div class="card">
                     <h3>Funil & Growth</h3>
-                    <p>Do clique ao cliente com análise completa.</p>
+                    <p>Estrutura completa do clique ao cliente.</p>
                 </div>
             </div>
         </div>
@@ -294,17 +301,16 @@
     <section id="sobre" class="about">
         <div class="container">
             <div class="about-content">
-                <img src="hiago.png" alt="Hiago Marcelo CLIX">
+                <img src="hiago.png" alt="Hiago Marcelo">
 
                 <div>
                     <h2>Quem é Hiago Marcelo?</h2>
                     <p>
-                        Policial Militar, fundador e CEO da <strong>CLIX</strong>,
-                        especialista em tráfego pago e crescimento previsível.
+                        Fundador da <strong>CLIX</strong> e especialista em tráfego pago
+                        focado em crescimento previsível.
                     </p>
                     <p>
-                        Ajudo empresas a transformarem anúncios em clientes reais
-                        com estratégia, clareza e foco em resultado.
+                        Estratégia, dados e conversão para empresas que querem escalar.
                     </p>
                 </div>
             </div>
@@ -321,7 +327,7 @@
             <div class="contact-container">
                 <form id="contactForm">
                     <input id="nome" placeholder="Nome completo" required>
-                    <input id="email" type="email" placeholder="Email corporativo" required>
+                    <input id="email" type="email" placeholder="Email" required>
                     <input id="wpp" placeholder="WhatsApp" required>
 
                     <select id="verba">
@@ -330,8 +336,8 @@
                         <option>Acima de R$ 15.000</option>
                     </select>
 
-                    <button class="btn btn-cta" style="width:100%" id="btnForm">
-                        Quero receber minha análise gratuita
+                    <button class="btn btn-cta" style="width:100%">
+                        QUERO UMA ANÁLISE GRATUITA
                     </button>
                 </form>
             </div>
@@ -342,34 +348,6 @@
     <footer>
         <p>© 2025 CLIX Marketing. Todos os direitos reservados.</p>
     </footer>
-
-    <!-- SCRIPTS -->
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        document.getElementById("ctaHero").addEventListener("click", () => {
-            dataLayer.push({ event: "cta_hero_click" });
-        });
-
-        document.getElementById("contactForm").addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            dataLayer.push({ event: "form_submit" });
-
-            const telefone = "5511993968524";
-            const mensagem =
-                `Quero uma análise gratuita para vender mais com tráfego pago.\n\n` +
-                `Nome: ${nome.value}\n` +
-                `Email: ${email.value}\n` +
-                `WhatsApp: ${wpp.value}\n` +
-                `Verba: ${verba.value}`;
-
-            window.open(
-                `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`,
-                "_blank"
-            );
-        });
-    </script>
 
 </body>
 
