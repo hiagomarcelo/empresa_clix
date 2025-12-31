@@ -1,182 +1,376 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO -->
-<title>CLIX | Gestão de Tráfego Pago para Empresas</title>
-<meta name="description" content="Gestão de tráfego pago focada em resultado. Google Ads e Meta Ads para empresas que querem vender mais com previsibilidade.">
-<meta name="robots" content="index, follow">
+    <!-- SEO -->
+    <title>CLIX | Gestão de Tráfego Pago para Empresas</title>
+    <meta name="description"
+        content="Gestão de tráfego pago focada em resultado. Google Ads e Meta Ads para empresas que querem vender mais com previsibilidade.">
+    <meta name="robots" content="index, follow">
 
-<!-- Open Graph -->
-<meta property="og:title" content="CLIX | Gestão de Tráfego Pago">
-<meta property="og:description" content="Transformamos cliques em clientes com tráfego pago inteligente.">
-<meta property="og:type" content="website">
+    <!-- Open Graph -->
+    <meta property="og:title" content="CLIX | Gestão de Tráfego Pago">
+    <meta property="og:description" content="Transformamos cliques em clientes com tráfego pago inteligente.">
+    <meta property="og:type" content="website">
 
-<!-- Google Tag Manager (COLOQUE SEU ID) -->
-<script>
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-XXXXXXX');
-</script>
+    <!-- Google Tag Manager (SUBSTITUA O ID) -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-XXXXXXX');
+    </script>
 
-<style>
-:root{
---primary:#0d47a1;
---secondary:#2979ff;
---accent:#ff6f00;
---success:#00e676;
---bg:#121214;
---card:#202024;
---text:#e1e1e6;
---muted:#a8a8b3;
-}
-*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Tahoma;}
-body{background:var(--bg);color:var(--text);padding-top:90px}
-a{text-decoration:none;color:inherit}
-.container{max-width:1100px;margin:auto;padding:0 20px}
-.btn{padding:12px 30px;border-radius:5px;font-weight:700;text-transform:uppercase;cursor:pointer}
-.btn-cta{background:var(--accent);color:#fff}
-header{background:#0e0e10;position:fixed;top:0;width:100%;height:90px;z-index:1000;display:flex;align-items:center}
-nav{display:flex;justify-content:space-between;align-items:center}
-.logo img{max-height:120px}
-.nav-links{display:flex;gap:30px}
-.hero{
-background:linear-gradient(rgba(0,0,0,.8),rgba(13,71,161,.6)),
-url("https://images.unsplash.com/photo-1557804506-669a67965ba0");
-background-size:cover;
-padding:140px 0 100px;
-text-align:center
-}
-.hero h1{font-size:3rem;margin-bottom:20px}
-.hero p{font-size:1.2rem;max-width:700px;margin:auto auto 40px;opacity:.9}
-section{padding:80px 0}
-.section-title{text-align:center;margin-bottom:50px}
-.section-title h2{color:var(--secondary);font-size:2.2rem}
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
-.card{background:var(--card);padding:30px;border-radius:8px;border:1px solid #333}
-.about{background:#1a1a1e}
-.about-content{display:flex;gap:50px;align-items:center}
-.about img{width:100%;border-radius:10px}
-.contact{background:var(--primary)}
-.contact-container{background:var(--card);padding:40px;border-radius:10px;max-width:600px;margin:auto}
-input,select{width:100%;padding:12px;margin-bottom:20px;background:#121214;border:1px solid #444;color:#fff;border-radius:5px}
-footer{background:#000;padding:30px;text-align:center;color:#555}
-@media(max-width:768px){
-.nav-links{display:none}
-.about-content{flex-direction:column}
-.hero h1{font-size:2rem}
-}
-</style>
+    <style>
+        /* ================= VARIÁVEIS ================= */
+        :root {
+            --primary: #0d47a1;
+            --secondary: #2979ff;
+            --accent: #ff6f00;
+            --bg: #121214;
+            --card: #202024;
+            --text: #e1e1e6;
+            --muted: #a8a8b3;
+        }
+
+        /* ================= RESET ================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            padding-top: 90px;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ================= BOTÕES ================= */
+        .btn {
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .btn-cta {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        /* ================= HEADER ================= */
+        header {
+            background: #0e0e10;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            max-height: 120px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        /* ================= HERO ================= */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, .8), rgba(13, 71, 161, .6)),
+                url("https://images.unsplash.com/photo-1557804506-669a67965ba0");
+            background-size: cover;
+            background-position: center;
+            padding: 140px 0 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: .9;
+        }
+
+        /* ================= SECTIONS ================= */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            color: var(--secondary);
+            font-size: 2.2rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+
+        /* ================= ABOUT ================= */
+        .about {
+            background: #1a1a1e;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* ================= CONTACT ================= */
+        .contact {
+            background: var(--primary);
+        }
+
+        .contact-container {
+            background: var(--card);
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            background: #121214;
+            border: 1px solid #444;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        /* ================= FOOTER ================= */
+        footer {
+            background: #000;
+            padding: 30px;
+            text-align: center;
+            color: #555;
+        }
+
+        /* ================= RESPONSIVO ================= */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- GTM NO SCRIPT -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
 
-<header>
-<div class="container">
-<nav>
-<div class="logo"><img src="logo.png" alt="CLIX Gestão de Tráfego"></div>
-<ul class="nav-links">
-<li><a href="#servicos">Serviços</a></li>
-<li><a href="#sobre">Sobre</a></li>
-<li><a href="#contato">Contato</a></li>
-</ul>
-<a href="#contato" class="btn btn-cta">Análise Gratuita</a>
-</nav>
-</div>
-</header>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="logo.png" alt="CLIX Gestão de Tráfego">
+                </div>
 
-<section class="hero">
-<div class="container">
-<h1>Transformamos cliques em clientes todos os dias com tráfego pago inteligente</h1>
-<p>Gestão de tráfego focada em performance para empresas que querem vender mais com previsibilidade usando Google Ads e Meta Ads.</p>
-<a href="#contato" class="btn btn-cta" id="ctaHero">Quero uma análise gratuita</a>
-</div>
-</section>
+                <ul class="nav-links">
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
 
-<section id="servicos">
-<div class="container">
-<div class="section-title">
-<h2>Serviços</h2>
-<p>Estratégias focadas em gerar clientes, não curtidas.</p>
-</div>
-<div class="services-grid">
-<div class="card"><h3>Google Ads</h3><p>Campanhas de fundo de funil focadas em conversão.</p></div>
-<div class="card"><h3>Meta Ads</h3><p>Anúncios estratégicos no Instagram e Facebook.</p></div>
-<div class="card"><h3>Funil & Growth</h3><p>Do clique ao cliente com análise completa.</p></div>
-</div>
-</div>
-</section>
+                <a href="#contato" class="btn btn-cta">Análise Gratuita</a>
+            </nav>
+        </div>
+    </header>
 
-<section id="sobre" class="about">
-<div class="container">
-<div class="about-content">
-<img src="hiago.png" alt="Hiago Marcelo CLIX">
-<div>
-<h2>Quem é Hiago Marcelo?</h2>
-<p>Policial Militar, fundador e CEO da <strong>CLIX</strong>, especialista em tráfego pago e crescimento previsível.</p>
-<p>Ajudo empresas a transformarem anúncios em clientes reais com estratégia, clareza e foco em resultado.</p>
-</div>
-</div>
-</div>
-</section>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>Transformamos cliques em clientes todos os dias com tráfego pago inteligente</h1>
+            <p>
+                Gestão de tráfego focada em performance para empresas que querem vender mais
+                com previsibilidade usando Google Ads e Meta Ads.
+            </p>
+            <a href="#contato" class="btn btn-cta" id="ctaHero">Quero uma análise gratuita</a>
+        </div>
+    </section>
 
-<section id="contato" class="contact">
-<div class="container">
-<div class="section-title">
-<h2 style="color:#fff">Receba sua análise gratuita</h2>
-</div>
-<div class="contact-container">
-<form id="contactForm">
-<input id="nome" placeholder="Nome completo" required>
-<input id="email" type="email" placeholder="Email corporativo" required>
-<input id="wpp" placeholder="WhatsApp" required>
-<select id="verba">
-<option>R$ 1.000 a R$ 5.000</option>
-<option>R$ 5.000 a R$ 15.000</option>
-<option>Acima de R$ 15.000</option>
-</select>
-<button class="btn btn-cta" style="width:100%" id="btnForm">Quero receber minha análise gratuita</button>
-</form>
-</div>
-</div>
-</section>
+    <!-- SERVIÇOS -->
+    <section id="servicos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Serviços</h2>
+                <p>Estratégias focadas em gerar clientes.</p>
+            </div>
 
-<footer>
-<p>© 2025 CLIX Marketing. Todos os direitos reservados.</p>
-</footer>
+            <div class="services-grid">
+                <div class="card">
+                    <h3>Google Ads</h3>
+                    <p>Campanhas de fundo de funil focadas em conversão.</p>
+                </div>
 
-<script>
-window.dataLayer = window.dataLayer || [];
+                <div class="card">
+                    <h3>Meta Ads</h3>
+                    <p>Anúncios estratégicos no Instagram e Facebook.</p>
+                </div>
 
-// CTA Hero
-document.getElementById("ctaHero").addEventListener("click",()=>{
-dataLayer.push({event:"cta_hero_click"});
-});
+                <div class="card">
+                    <h3>Funil & Growth</h3>
+                    <p>Do clique ao cliente com análise completa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-// Formulário
-document.getElementById("contactForm").addEventListener("submit",function(e){
-e.preventDefault();
+    <!-- SOBRE -->
+    <section id="sobre" class="about">
+        <div class="container">
+            <div class="about-content">
+                <img src="hiago.png" alt="Hiago Marcelo CLIX">
 
-dataLayer.push({event:"form_submit"});
+                <div>
+                    <h2>Quem é Hiago Marcelo?</h2>
+                    <p>
+                        Policial Militar, fundador e CEO da <strong>CLIX</strong>,
+                        especialista em tráfego pago e crescimento previsível.
+                    </p>
+                    <p>
+                        Ajudo empresas a transformarem anúncios em clientes reais
+                        com estratégia, clareza e foco em resultado.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-const telefone="5511993968524";
-const msg=`Quero uma análise gratuita para vender mais com tráfego pago.%0A
-Nome: ${nome.value}%0A
-Email: ${email.value}%0A
-WhatsApp: ${wpp.value}%0A
-Verba: ${verba.value}`;
+    <!-- CONTATO -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color:#fff">Receba sua análise gratuita</h2>
+            </div>
 
-window.open(`https://wa.me/${telefone}?text=${msg}`,"_blank");
-});
-</script>
+            <div class="contact-container">
+                <form id="contactForm">
+                    <input id="nome" placeholder="Nome completo" required>
+                    <input id="email" type="email" placeholder="Email corporativo" required>
+                    <input id="wpp" placeholder="WhatsApp" required>
+
+                    <select id="verba">
+                        <option>R$ 1.000 a R$ 5.000</option>
+                        <option>R$ 5.000 a R$ 15.000</option>
+                        <option>Acima de R$ 15.000</option>
+                    </select>
+
+                    <button class="btn btn-cta" style="width:100%" id="btnForm">
+                        Quero receber minha análise gratuita
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 CLIX Marketing. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        document.getElementById("ctaHero").addEventListener("click", () => {
+            dataLayer.push({ event: "cta_hero_click" });
+        });
+
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            dataLayer.push({ event: "form_submit" });
+
+            const telefone = "5511993968524";
+            const mensagem =
+                `Quero uma análise gratuita para vender mais com tráfego pago.\n\n` +
+                `Nome: ${nome.value}\n` +
+                `Email: ${email.value}\n` +
+                `WhatsApp: ${wpp.value}\n` +
+                `Verba: ${verba.value}`;
+
+            window.open(
+                `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`,
+                "_blank"
+            );
+        });
+    </script>
 
 </body>
+
 </html>
